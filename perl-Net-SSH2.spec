@@ -1,7 +1,7 @@
 %define module	Net-SSH2
 %define name	perl-%{module}
 %define version	0.10
-%define release %mkrel 1
+%define release %mkrel 2
 
 Name:		%{name}
 Version:	%{version}
@@ -11,6 +11,7 @@ License:	GPL
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{module}/
 Source:		http://www.cpan.org/modules/by-module/Net/%{module}-%{version}.tar.bz2
+Patch0:		Net-SSH2-LIBSSH2_APINO_fix.diff
 Buildrequires:	perl-devel
 BuildRequires:	perl(Term::ReadKey)
 BuildRequires:	libssh-devel
@@ -23,6 +24,7 @@ key exchanges, ciphers, and compression of libssh2.
 
 %prep
 %setup -q -n %{module}-%{version}
+%patch0 -p0
 
 perl -pi -e 's~^my \$inc.*~my \$inc = "%_includedir";~' Makefile.PL
 perl -pi -e 's~^my \$lib.*~my \$lib = "%_libdir";~' Makefile.PL
@@ -30,6 +32,7 @@ perl -pi -e 's~^my \$lib.*~my \$lib = "%_libdir";~' Makefile.PL
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
 %make CFLAGS="%{optflags}"
+
 
 %check
 %{__make} test
@@ -47,6 +50,3 @@ rm -rf %{buildroot}
 %{perl_vendorarch}/Net
 %{perl_vendorarch}/auto/Net
 %{_mandir}/*/*
-
-
-
