@@ -14,6 +14,7 @@ Source:		http://www.cpan.org/modules/by-module/Net/%{module}-%{version}.tar.bz2
 Buildrequires:	perl-devel
 BuildRequires:	perl(Term::ReadKey)
 BuildRequires:	libssh-devel
+Buildroot:	%{_tmppath}/%{name}-%{version}
 
 %description
 Net::SSH2 is a perl interface to the libssh2 (http://www.libssh2.org) library.
