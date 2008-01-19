@@ -13,7 +13,7 @@ Url:		http://search.cpan.org/dist/%{module}/
 Source:		http://www.cpan.org/modules/by-module/Net/%{module}-%{version}.tar.bz2
 Buildrequires:	perl-devel
 BuildRequires:	perl(Term::ReadKey)
-BuildRequires:	libssh-devel
+BuildRequires:	libssh2-devel
 Buildroot:	%{_tmppath}/%{name}-%{version}
 
 %description
