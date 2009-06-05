@@ -1,6 +1,6 @@
 %define module	Net-SSH2
 %define name	perl-%{module}
-%define version	0.19
+%define version	0.20
 %define release %mkrel 1
 
 Name:		%{name}
@@ -10,7 +10,7 @@ Summary:	Support for the SSH 2 protocol via libSSH2
 License:	GPL
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{module}/
-Source:		http://www.cpan.org/modules/by-module/Net/%{module}-%{version}.tar.bz2
+Source:		http://www.cpan.org/modules/by-module/Net/%{module}-%{version}.tar.gz
 Buildrequires:	perl-devel
 BuildRequires:	perl(Term::ReadKey)
 BuildRequires:	libssh2-devel
