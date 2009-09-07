@@ -1,9 +1,9 @@
 %define upstream_name	 Net-SSH2
-%define upstream_version 0.24
+%define upstream_version 0.25
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 1
 
 Summary:	Support for the SSH 2 protocol via libSSH2
 License:	GPL
