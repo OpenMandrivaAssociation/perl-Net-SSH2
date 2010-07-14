@@ -1,5 +1,5 @@
 %define upstream_name	 Net-SSH2
-%define upstream_version 0.31
+%define upstream_version 0.33
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
