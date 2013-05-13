@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:	2
+Release:	3
 
 Summary:	Support for the SSH 2 protocol via libSSH2
 License:	GPL
@@ -14,7 +14,6 @@ Source0:	http://www.cpan.org/modules/by-module/Net/%{upstream_name}-%{upstream_v
 BuildRequires:	pkgconfig(libssh2)
 BuildRequires:	perl(Term::ReadKey)
 Buildrequires:	perl-devel
-Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Net::SSH2 is a perl interface to the libssh2 (http://www.libssh2.org) library.
