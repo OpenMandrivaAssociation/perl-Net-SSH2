@@ -11,7 +11,7 @@ Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}/
 Source0:	http://www.cpan.org/modules/by-module/Net/%{upstream_name}-%{upstream_version}.tar.gz
 
-BuildRequires:	libssh2-devel
+BuildRequires:	pkgconfig(libssh2)
 BuildRequires:	perl(Term::ReadKey)
 Buildrequires:	perl-devel
 Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}
