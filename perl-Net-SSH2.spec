@@ -1,15 +1,15 @@
 %define upstream_name	 Net-SSH2
-%define upstream_version 0.39
+%define upstream_version 0.49
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:	3
+Version:    %perl_convert_version 0.49
+Release:	1
 
 Summary:	Support for the SSH 2 protocol via libSSH2
 License:	GPL
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}/
-Source0:	http://www.cpan.org/modules/by-module/Net/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Net/Net-SSH2-0.49.tar.gz
 
 BuildRequires:	pkgconfig(libssh2)
 BuildRequires:	perl(Term::ReadKey)
@@ -181,7 +181,7 @@ rm -rf %{buildroot}
 - New release 0.08
 - fix compilation flags
 
-* Sat Apr 29 2006 Nicolas Lécureuil <neoclust@mandriva.org> 0.07-2mdk
+* Sat Apr 29 2006 Nicolas LÃ©cureuil <neoclust@mandriva.org> 0.07-2mdk
 - Fix SPEC according to Perl Policy
 	- BuildRequires
 	- Source URL
@@ -195,7 +195,7 @@ rm -rf %{buildroot}
 - rpmbuildupdate aware
 - fix buildrequires
 
-* Wed Dec 21 2005 Nicolas Lécureuil <neoclust@mandriva.org> 0.05-2mdk
+* Wed Dec 21 2005 Nicolas LÃ©cureuil <neoclust@mandriva.org> 0.05-2mdk
 - Add BuildRequires: perl-Term-ReadKey
 
 * Tue Dec 20 2005 Olivier Thauvin <nanardon@mandriva.org> 0.05-1mdk
@@ -203,4 +203,5 @@ rm -rf %{buildroot}
 
 * Fri Nov 18 2005 Olivier Thauvin <nanardon@mandriva.org> 0.04-1mdk
 - initial contrib
+
 
