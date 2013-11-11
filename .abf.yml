@@ -1,4 +1,5 @@
 removed_sources:
   Net-SSH2-0.39.tar.gz: 0935a36c6507b6e34beae21e0185ad6f31b1a61b
-sources:
   Net-SSH2-0.49.tar.gz: 143825148fcea9eeec73491e7e549f270592affb
+sources:
+  Net-SSH2-0.53.tar.gz: 080681f80e87d975658dc8322f15e1024f40a338

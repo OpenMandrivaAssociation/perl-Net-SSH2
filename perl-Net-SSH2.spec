@@ -1,15 +1,15 @@
 %define upstream_name	 Net-SSH2
-%define upstream_version 0.49
+%define upstream_version 0.53
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version 0.49
+Version:    %perl_convert_version %{upstream_version}
 Release:	1
 
 Summary:	Support for the SSH 2 protocol via libSSH2
 License:	GPL
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}/
-Source0:	http://www.cpan.org/modules/by-module/Net/Net-SSH2-0.49.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Net/Net-SSH2-%{upstream_version}.tar.gz
 
 BuildRequires:	pkgconfig(libssh2)
 BuildRequires:	perl(Term::ReadKey)
@@ -35,14 +35,11 @@ perl -pi -e 's~^my \$lib.*~my \$lib = "%_libdir";~' Makefile.PL
 %{__make} test
 
 %clean
-rm -rf %{buildroot}
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 
 %files
-%defattr(-,root,root)
 %doc Changes README
 %{perl_vendorarch}/Net
 %{perl_vendorarch}/auto/Net
@@ -203,5 +200,6 @@ rm -rf %{buildroot}
 
 * Fri Nov 18 2005 Olivier Thauvin <nanardon@mandriva.org> 0.04-1mdk
 - initial contrib
+
 
 
