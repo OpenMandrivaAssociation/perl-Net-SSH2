@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:	1
+Release:	2
 
 Summary:	Support for the SSH 2 protocol via libSSH2
 License:	GPL
