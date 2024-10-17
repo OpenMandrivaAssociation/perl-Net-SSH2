@@ -8,7 +8,7 @@ Release:	3
 Summary:	Support for the SSH 2 protocol via libSSH2
 License:	GPL
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}/
+Url:		https://search.cpan.org/dist/%{upstream_name}/
 Source0:	http://www.cpan.org/modules/by-module/Net/Net-SSH2-%{upstream_version}.tar.gz
 
 BuildRequires:	pkgconfig(libssh2)
