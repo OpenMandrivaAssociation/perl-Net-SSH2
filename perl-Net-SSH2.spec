@@ -1,15 +1,15 @@
 %define upstream_name	 Net-SSH2
-%define upstream_version 0.53
+%define upstream_version 0.74
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:	3
+Version:    %{upstream_version}
+Release:	1
 
 Summary:	Support for the SSH 2 protocol via libSSH2
 License:	GPL
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}/
-Source0:	http://www.cpan.org/modules/by-module/Net/Net-SSH2-%{upstream_version}.tar.gz
+Url:		https://github.com/rkitover/net-ssh2
+Source0:	https://cpan.metacpan.org/authors/id/R/RK/RKITOVER/Net-SSH2-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	pkgconfig(libssh2)
