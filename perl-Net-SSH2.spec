@@ -1,15 +1,13 @@
 %define upstream_name	 Net-SSH2
-%define upstream_version 0.74
-
 Name:       perl-%{upstream_name}
-Version:    %{upstream_version}
-Release:	1
+Version:    0.74
+Release:	2
 
 Summary:	Support for the SSH 2 protocol via libSSH2
 License:	GPL
 Group:		Development/Perl
 Url:		https://github.com/rkitover/net-ssh2
-Source0:	https://cpan.metacpan.org/authors/id/R/RK/RKITOVER/Net-SSH2-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/R/RK/RKITOVER/Net-SSH2-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	pkgconfig(libssh2)
@@ -22,7 +20,7 @@ It supports the SSH2 protocol (there is no support for SSH1) with all of the
 key exchanges, ciphers, and compression of libssh2.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 perl -pi -e 's~^my \$inc.*~my \$inc = "%_includedir";~' Makefile.PL
 perl -pi -e 's~^my \$lib.*~my \$lib = "%_libdir";~' Makefile.PL
@@ -120,9 +118,7 @@ perl -pi -e 's~^my \$lib.*~my \$lib = "%_libdir";~' Makefile.PL
 
 * Mon Aug 03 2009 Jérôme Quelin <jquelin@mandriva.org> 0.210.0-1mdv2010.0
 + Revision: 407867
-- rebuild using %%perl_convert_version
-
-* Sun Jun 07 2009 Guillaume Rousse <guillomovitch@mandriva.org> 0.21-1mdv2010.0
+- rebuild using %0.74 Sun Jun 07 2009 Guillaume Rousse <guillomovitch@mandriva.org> 0.21-1mdv2010.0
 + Revision: 383532
 - update to new version 0.21
 
